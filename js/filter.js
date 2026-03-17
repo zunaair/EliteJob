@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const jobGrid          = document.getElementById('jobGrid');
 
   if (searchBtn && jobGrid && typeof JOBS !== 'undefined') {
-    renderJobs(JOBS);
+    renderSkeleton();
+    setTimeout(() => renderJobs(JOBS), 600);
 
     searchBtn.addEventListener('click', () => {
       const kw  = (searchKeyword?.value  || '').toLowerCase().trim();
@@ -53,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     jobGrid.innerHTML = jobs.map(job => `
-      <div class="card animate-fade" data-type="${job.type}">
+      <div class="card animate-fade job-card-clickable" data-type="${job.type}" data-job-id="${job.id}" style="cursor:pointer;">
         <span class="job-tag">${formatType(job.type)}</span>
         <h3>${job.title}</h3>
         <p class="job-company text-muted">${job.company} · ${job.location}</p>
@@ -71,6 +72,19 @@ document.addEventListener('DOMContentLoaded', () => {
     `).join('');
 
     if (window.lucide) lucide.createIcons({ el: jobGrid });
+  }
+
+  function renderSkeleton() {
+    jobGrid.innerHTML = Array(6).fill(0).map(() => `
+      <div class="card skeleton-card">
+        <div class="skeleton skeleton-tag"></div>
+        <div class="skeleton skeleton-title"></div>
+        <div class="skeleton skeleton-sub"></div>
+        <div class="skeleton skeleton-text"></div>
+        <div class="skeleton skeleton-text short"></div>
+        <div class="skeleton skeleton-btn"></div>
+      </div>
+    `).join('');
   }
 
   function formatType(type) {

@@ -6,6 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EliteJob — Modern Job Portal &amp; Career Prep</title>
   <meta name="description" content="Find the best tech jobs and prepare for interviews with our comprehensive DSA sheets, company hiring patterns, and aptitude resources.">
+  <meta name="keywords" content="jobs, tech jobs, software engineer jobs, DSA prep, interview preparation, Pakistan jobs, remote jobs">
+  <meta name="author" content="EliteJob">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EliteJob — Modern Job Portal & Career Prep">
+  <meta property="og:description" content="Find the best tech jobs and prepare for interviews with our comprehensive DSA sheets and aptitude resources.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://elite-job.vercel.app">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EliteJob — Modern Job Portal & Career Prep">
+  <meta name="twitter:description" content="Find the best tech jobs and prepare for interviews.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -361,6 +375,14 @@
       <p>&copy; 2026 EliteJob Portal. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ── Job Detail Modal ───────────────────────────────────── -->
+  <div class="modal-overlay" id="jobModal">
+    <div class="modal job-modal">
+      <button class="modal-close" id="jobModalClose"><i data-lucide="x"></i></button>
+      <div id="jobModalContent"></div>
+    </div>
+  </div>
 
   <script src="js/data/jobs.js"></script>
   <script src="js/main.js"></script>
