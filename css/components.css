@@ -412,6 +412,9 @@ nav {
 
     .mobile-menu-toggle { display: flex; }
 
+    /* Hide Sign In / Sign Up from nav on mobile */
+    #signInBtn, #signUpBtn { display: none; }
+
     .toast {
         left: 1rem;
         right: 1rem;

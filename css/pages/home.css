@@ -242,4 +242,13 @@
     .search-inputs     { grid-template-columns: 1fr; }
 
     .opportunities-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+
+    .prep-hub-section .category-nav { gap: 0.5rem; }
+    .category-btn                   { font-size: 0.8rem; padding: 0.4rem 0.85rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-cta          { flex-direction: column; }
+    .hero-cta .btn     { width: 100%; justify-content: center; }
+    .search-box-header h2 { font-size: 1.5rem; }
 }

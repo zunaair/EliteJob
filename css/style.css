@@ -439,4 +439,23 @@ footer .logo { font-size: 1.1rem; }
 @media (max-width: 768px) {
     .container { padding: 0 1.25rem; }
     section    { padding: 3rem 0; }
+
+    /* Footer stacks on mobile */
+    .footer-inner       { flex-direction: column; gap: 2rem; }
+    .footer-links       { flex-direction: column; gap: 1.5rem; }
+    .footer-bottom p    { text-align: center; }
+
+    /* Testimonials padding on mobile */
+    .testimonials-section { padding: 3rem 0; }
+    .testimonials-grid    { gap: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+    .hero-left h1         { font-size: 1.9rem; }
+    .hero-stat h2         { font-size: 1.5rem; }
+    .hero-stats           { gap: 1rem; }
+    .section-header h2    { font-size: 1.6rem; }
+    .btn                  { padding: 0.65rem 1.25rem; font-size: 0.88rem; }
+    .testimonial-card     { padding: 1.5rem; }
+    .modal                { padding: 1.75rem 1.25rem; }
 }
