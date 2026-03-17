@@ -7,8 +7,10 @@ const JOBS = [
     company: 'Google',
     location: 'Mountain View, CA',
     type: 'full-time',
+    experience: 'senior',
     salary: '$180k – $250k',
     posted: '2d ago',
+    applications: 342,
     description: 'Work on the next generation of Search algorithms and AI integration.',
     tags: ['Python', 'Distributed Systems', 'ML']
   },
@@ -18,8 +20,10 @@ const JOBS = [
     company: 'Designhub',
     location: 'Remote · Global',
     type: 'remote',
+    experience: 'mid',
     salary: '$120k – $160k',
     posted: '5h ago',
+    applications: 89,
     description: 'Shape the future of collaborative design tools for modern teams.',
     tags: ['Figma', 'UX Research', 'Prototyping']
   },
@@ -29,8 +33,10 @@ const JOBS = [
     company: 'StartupX',
     location: 'Bengaluru, India',
     type: 'internship',
+    experience: 'entry',
     salary: '₹40k / mo',
     posted: '1d ago',
+    applications: 214,
     description: 'Learn and build production-grade React applications in a fast-paced environment.',
     tags: ['React', 'TypeScript', 'CSS']
   },
@@ -40,8 +46,10 @@ const JOBS = [
     company: 'Stripe',
     location: 'San Francisco, CA',
     type: 'full-time',
+    experience: 'mid',
     salary: '$160k – $220k',
     posted: '3d ago',
+    applications: 178,
     description: 'Build reliable, high-throughput payment infrastructure at global scale.',
     tags: ['Go', 'PostgreSQL', 'gRPC']
   },
@@ -51,8 +59,10 @@ const JOBS = [
     company: 'Netflix',
     location: 'Remote · USA',
     type: 'remote',
+    experience: 'senior',
     salary: '$140k – $200k',
     posted: '1d ago',
+    applications: 256,
     description: 'Drive A/B testing and recommendation system improvements using ML and statistics.',
     tags: ['Python', 'Spark', 'Machine Learning']
   },
@@ -62,8 +72,10 @@ const JOBS = [
     company: 'Atlassian',
     location: 'Sydney, Australia',
     type: 'full-time',
+    experience: 'senior',
     salary: 'AUD $130k – $170k',
     posted: '6d ago',
+    applications: 103,
     description: 'Manage Kubernetes clusters and CI/CD pipelines for Jira and Confluence.',
     tags: ['Kubernetes', 'Terraform', 'AWS']
   },
@@ -73,8 +85,10 @@ const JOBS = [
     company: 'OpenAI',
     location: 'San Francisco, CA',
     type: 'internship',
+    experience: 'entry',
     salary: '$8k / mo',
     posted: '2d ago',
+    applications: 491,
     description: 'Assist research teams training and evaluating large language models.',
     tags: ['PyTorch', 'Python', 'Transformers']
   },
@@ -84,8 +98,10 @@ const JOBS = [
     company: 'Paytm',
     location: 'Noida, India',
     type: 'full-time',
+    experience: 'mid',
     salary: '₹18–30 LPA',
     posted: '4d ago',
+    applications: 137,
     description: 'Build and optimise Android features for 350M+ users in fintech.',
     tags: ['Kotlin', 'Jetpack Compose', 'MVVM']
   },
@@ -95,8 +111,10 @@ const JOBS = [
     company: 'Amazon Web Services',
     location: 'Remote · Europe',
     type: 'remote',
+    experience: 'senior',
     salary: '€100k – €140k',
     posted: '8h ago',
+    applications: 74,
     description: 'Guide enterprise customers in designing resilient cloud architectures on AWS.',
     tags: ['AWS', 'Architecture', 'Networking']
   }

@@ -3,11 +3,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   // ── Job Search ─────────────────────────────────────────────────
-  const searchKeyword  = document.getElementById('searchKeyword');
-  const searchLocation = document.getElementById('searchLocation');
-  const searchType     = document.getElementById('searchType');
-  const searchBtn      = document.getElementById('searchBtn');
-  const jobGrid        = document.getElementById('jobGrid');
+  const searchKeyword    = document.getElementById('searchKeyword');
+  const searchLocation   = document.getElementById('searchLocation');
+  const searchType       = document.getElementById('searchType');
+  const searchExperience = document.getElementById('searchExperience');
+  const searchBtn        = document.getElementById('searchBtn');
+  const jobGrid          = document.getElementById('jobGrid');
 
   if (searchBtn && jobGrid && typeof JOBS !== 'undefined') {
     renderJobs(JOBS);
@@ -16,12 +17,14 @@ document.addEventListener('DOMContentLoaded', () => {
       const kw  = (searchKeyword?.value  || '').toLowerCase().trim();
       const loc = (searchLocation?.value || '').toLowerCase().trim();
       const typ = (searchType?.value     || '').toLowerCase().trim();
+      const exp = (searchExperience?.value || '').toLowerCase().trim();
 
       const filtered = JOBS.filter(job => {
         const matchKw  = !kw  || job.title.toLowerCase().includes(kw)   || job.company.toLowerCase().includes(kw)  || job.tags.some(t => t.toLowerCase().includes(kw));
         const matchLoc = !loc || job.location.toLowerCase().includes(loc);
         const matchTyp = !typ || job.type === typ;
-        return matchKw && matchLoc && matchTyp;
+        const matchExp = !exp || job.experience === exp;
+        return matchKw && matchLoc && matchTyp && matchExp;
       });
 
       renderJobs(filtered);
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="job-meta">
           <span><i data-lucide="dollar-sign"></i> ${job.salary}</span>
           <span><i data-lucide="clock"></i> ${job.posted}</span>
+          <span><i data-lucide="users"></i> ${job.applications} applied</span>
         </div>
         <button class="btn btn-primary btn-full" style="margin-top: 1.5rem;">Apply Now</button>
       </div>
