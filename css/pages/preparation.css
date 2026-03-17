@@ -1,0 +1,29 @@
+/* ============================================================
+   Preparation Hub Page
+   ============================================================ */
+
+.prep-page-header {
+    margin-bottom: 2rem;
+}
+
+.prep-page-header h1 { font-size: 2.5rem; }
+.prep-page-header p  { color: var(--text-muted); margin-top: 0.4rem; }
+
+/* Resource card overrides for the full prep page */
+.resource-card h3 { font-size: 1.05rem; margin-bottom: 0.5rem; }
+.resource-card p  { font-size: 0.9rem; color: var(--text-muted); }
+
+/* Hidden cards (filtered out) */
+.resource-card.hidden { display: none; }
+
+/* ── No results ─────────────────────────────────────────────── */
+.prep-no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-muted);
+    display: none;
+}
+
+.prep-no-results.show { display: block; }
+.prep-no-results svg { width: 40px; height: 40px; margin: 0 auto 1rem; opacity: 0.4; }

@@ -1,0 +1,421 @@
+/* ============================================================
+   EliteJob Portal — Reusable Components
+   Nav · Buttons · Cards · Grid · Toast · Tags · Category
+   ============================================================ */
+
+/* ── Navigation ─────────────────────────────────────────────── */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: var(--bg-nav);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: var(--theme-transition);
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo svg { width: 22px; height: 22px; }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: width 0.25s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.user-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.theme-toggle:hover {
+    background: var(--primary-light);
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.theme-toggle svg { width: 18px; height: 18px; }
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg-card);
+    color: var(--text-main);
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+.btn-primary {
+    background-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 4px 14px rgba(110, 154, 104, 0.35);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(110, 154, 104, 0.45);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--border);
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--primary-light);
+}
+
+.btn-full { width: 100%; justify-content: center; }
+
+/* ── Cards ──────────────────────────────────────────────────── */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.75rem;
+}
+
+.card {
+    background: var(--bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--primary);
+}
+
+.card-icon {
+    width: 46px;
+    height: 46px;
+    background: var(--primary-light);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 1.25rem;
+}
+
+.card-icon svg { width: 22px; height: 22px; }
+
+/* ── Job Tags ───────────────────────────────────────────────── */
+.job-tag {
+    display: inline-block;
+    padding: 0.2rem 0.7rem;
+    background: var(--primary-light);
+    color: var(--primary);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.job-meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    margin-top: 1rem;
+    align-items: center;
+}
+
+.job-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.job-meta svg { width: 14px; height: 14px; }
+
+/* ── Prep Tags ──────────────────────────────────────────────── */
+.prep-tag {
+    display: inline-block;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.75rem;
+}
+
+.tag-aptitude  { background: #fee2e2; color: #b91c1c; }
+.tag-technical { background: #dcfce7; color: #15803d; }
+.tag-hr        { background: #fef9c3; color: #a16207; }
+.tag-cs        { background: #e0e7ff; color: #4338ca; }
+
+[data-theme='dark'] .tag-aptitude  { background: rgba(185,28,28,0.2);  color: #fca5a5; }
+[data-theme='dark'] .tag-technical { background: rgba(21,128,61,0.2);  color: #86efac; }
+[data-theme='dark'] .tag-hr        { background: rgba(161,98,7,0.2);   color: #fde68a; }
+[data-theme='dark'] .tag-cs        { background: rgba(67,56,202,0.2);  color: #a5b4fc; }
+
+/* ── Resource Card ──────────────────────────────────────────── */
+.resource-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.resource-card .resource-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-muted);
+    font-size: 0.83rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.resource-card .resource-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.resource-card .resource-meta svg { width: 14px; height: 14px; }
+
+.resource-card .btn { margin-top: auto; }
+
+/* ── Category Nav ───────────────────────────────────────────── */
+.category-nav {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.category-btn {
+    padding: 0.5rem 1.1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    white-space: nowrap;
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: var(--transition);
+}
+
+.category-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+.category-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+}
+
+/* ── Toast ──────────────────────────────────────────────────── */
+.toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 0.9rem 1.5rem;
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--primary);
+    border-radius: 12px;
+    box-shadow: var(--shadow-xl);
+    z-index: 2000;
+    transform: translateY(150%);
+    opacity: 0;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 500;
+    font-size: 0.92rem;
+    max-width: 320px;
+}
+
+.toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.toast svg { width: 18px; height: 18px; color: var(--primary); flex-shrink: 0; }
+
+/* ── Job Card Specifics ─────────────────────────────────────── */
+.job-company {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin: 0.4rem 0 0.75rem;
+}
+
+.job-desc {
+    font-size: 0.9rem;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+.job-tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.9rem;
+}
+
+.job-skill-tag {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 4px;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* ── Section Headers ────────────────────────────────────────── */
+.section-header {
+    margin-bottom: 2rem;
+}
+
+.section-header h2 { font-size: 2rem; }
+.section-header p  { color: var(--text-muted); margin-top: 0.4rem; }
+
+/* ── Popular Tags ───────────────────────────────────────────── */
+.popular-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 1.5rem;
+    font-size: 0.88rem;
+}
+
+.popular-tags .label { color: var(--text-muted); }
+
+.popular-tag {
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.8rem;
+    border-radius: 99px;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.popular-tag:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-light);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+
+    .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--bg-nav);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 2rem;
+        gap: 1rem;
+        backdrop-filter: blur(12px);
+    }
+
+    .mobile-menu-toggle { display: flex; }
+
+    .toast {
+        left: 1rem;
+        right: 1rem;
+        bottom: 1rem;
+        max-width: unset;
+    }
+}

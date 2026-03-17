@@ -1,0 +1,245 @@
+/* ============================================================
+   Home Page — Hero · Search · Opportunities · Prep Preview
+   ============================================================ */
+
+/* ── Hero ───────────────────────────────────────────────────── */
+.hero {
+    background-color: var(--hero-bg);
+    color: var(--hero-text);
+    min-height: 82vh;
+    display: flex;
+    align-items: center;
+    padding: 5rem 0 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle grid texture */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(110,154,104,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(110,154,104,0.04) 1px, transparent 1px);
+    background-size: 48px 48px;
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-left h1 {
+    font-size: 3.4rem;
+    color: var(--hero-text);
+    margin-bottom: 1.25rem;
+    line-height: 1.15;
+}
+
+.hero-left h1 .highlight {
+    color: var(--primary);
+}
+
+.hero-left p {
+    color: var(--hero-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2rem;
+    max-width: 460px;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.hero-stat h2 {
+    font-size: 1.9rem;
+    color: var(--hero-text);
+    margin-bottom: 0.1rem;
+}
+
+.hero-stat p {
+    font-size: 0.83rem;
+    color: var(--hero-muted);
+    margin: 0;
+}
+
+/* Hero feature cards (right column) — even grid, no random offsets */
+.hero-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    align-self: center;
+}
+
+.hero-feature-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 14px;
+    padding: 1.4rem;
+    transition: var(--transition);
+}
+
+.hero-feature-card:hover {
+    background: rgba(110,154,104,0.15);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+}
+
+.hero-feature-card .card-icon {
+    background: var(--primary-light);
+    margin-bottom: 0.85rem;
+    width: 42px;
+    height: 42px;
+}
+
+.hero-feature-card h4 {
+    color: var(--hero-text);
+    margin-bottom: 0.2rem;
+    font-size: 0.93rem;
+}
+
+.hero-feature-card p {
+    color: var(--hero-muted);
+    font-size: 0.78rem;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* ── Search Section ─────────────────────────────────────────── */
+.search-section {
+    background: var(--bg-main);
+    padding: 0;
+}
+
+.search-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: var(--shadow-xl);
+    margin-top: -2.5rem;
+    position: relative;
+    z-index: 10;
+    transition: var(--theme-transition);
+}
+
+.search-box-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.search-box-header h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.search-box-header h2 span { color: var(--primary); }
+
+.search-box-header p {
+    color: var(--text-muted);
+    margin-top: 0.4rem;
+}
+
+.search-inputs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.search-input {
+    padding: 0.9rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    background: var(--bg-main);
+    color: var(--text-main);
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: var(--transition);
+    width: 100%;
+}
+
+.search-input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.search-input option {
+    background: var(--bg-card);
+    color: var(--text-main);
+}
+
+.search-btn-row {
+    text-align: center;
+}
+
+/* ── Opportunities Section ──────────────────────────────────── */
+.opportunities-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 0.5rem;
+}
+
+.opportunities-header h2 span { color: var(--primary); font-weight: 300; }
+
+/* No results message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 0;
+    color: var(--text-muted);
+}
+
+.no-results svg { width: 48px; height: 48px; margin: 0 auto 1rem; opacity: 0.4; }
+
+/* ── Prep Hub Preview (home page) ───────────────────────────── */
+.prep-hub-section .grid {
+    margin-top: 2rem;
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 960px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+    }
+
+    .hero-left p  { max-width: unset; }
+    .hero-cta     { justify-content: center; }
+    .hero-stats   { justify-content: center; }
+    .hero-features { display: none; }
+
+    .search-box { margin-top: 0; border-radius: 0; border-left: none; border-right: none; }
+}
+
+@media (max-width: 768px) {
+    .hero              { padding: 3.5rem 0 4rem; min-height: unset; }
+    .hero-left h1      { font-size: 2.4rem; }
+    .hero-stats        { gap: 1.5rem; flex-wrap: wrap; }
+
+    .search-box        { padding: 1.75rem; }
+    .search-inputs     { grid-template-columns: 1fr; }
+
+    .opportunities-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteJob — Interview Preparation Hub</title>
+  <meta name="description" content="Comprehensive interview prep resources — aptitude, technical, HR, and CS fundamentals.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/preparation.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <a href="../index.html" class="logo">
+      <i data-lucide="briefcase"></i>
+      EliteJob
+    </a>
+
+    <div class="nav-links">
+      <a href="../index.html">Jobs</a>
+      <a href="index.html" class="active">Preparation</a>
+      <a href="../companies/index.html">Companies</a>
+      <a href="../dsa/index.html">DSA Prep</a>
+    </div>
+
+    <div class="user-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="sun"></i>
+      </button>
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+    <header class="prep-page-header animate-fade">
+      <h1>Interview Preparation Hub</h1>
+      <p>Everything you need to crack your next technical or non-technical interview.</p>
+    </header>
+
+    <div class="category-nav" style="margin-top: 2.5rem;">
+      <button class="category-btn active">All Resources</button>
+      <button class="category-btn">Aptitude</button>
+      <button class="category-btn">Technical</button>
+      <button class="category-btn">CS Fundamentals</button>
+      <button class="category-btn">HR</button>
+    </div>
+
+    <div class="grid">
+
+      <!-- Aptitude 1 -->
+      <div class="card resource-card animate-fade" data-category="aptitude">
+        <span class="prep-tag tag-aptitude">Aptitude</span>
+        <h3>Quantitative Masterclass</h3>
+        <p>Comprehensive guide to Numbers, Profit &amp; Loss, Time &amp; Work, and probability.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="file-text"></i> 12 Topics</span>
+          <span><i data-lucide="play-circle"></i> 4 Practice Sets</span>
+        </div>
+        <button class="btn btn-primary btn-full">Start Learning</button>
+      </div>
+
+      <!-- Aptitude 2 -->
+      <div class="card resource-card animate-fade" data-category="aptitude">
+        <span class="prep-tag tag-aptitude">Aptitude</span>
+        <h3>Logical Reasoning Guide</h3>
+        <p>Blood relations, seating arrangements, syllogisms, and puzzle-type questions.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="brain"></i> 8 Topics</span>
+          <span><i data-lucide="clock"></i> Timed Drills</span>
+        </div>
+        <button class="btn btn-primary btn-full">Start Learning</button>
+      </div>
+
+      <!-- Aptitude 3 -->
+      <div class="card resource-card animate-fade" data-category="aptitude">
+        <span class="prep-tag tag-aptitude">Aptitude</span>
+        <h3>Verbal Ability &amp; English</h3>
+        <p>Reading comprehension, sentence correction, vocabulary, and para-jumbles.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="book-open"></i> 10 Topics</span>
+          <span><i data-lucide="pen-line"></i> Practice Tests</span>
+        </div>
+        <button class="btn btn-primary btn-full">Start Learning</button>
+      </div>
+
+      <!-- Technical 1 -->
+      <div class="card resource-card animate-fade" data-category="technical">
+        <span class="prep-tag tag-technical">Technical</span>
+        <h3>DBMS &amp; SQL Notes</h3>
+        <p>From normalisation to indexing and complex joins. Interview-focused SQL collection.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="database"></i> 45 Notes</span>
+          <span><i data-lucide="terminal"></i> 20+ Lab Tasks</span>
+        </div>
+        <button class="btn btn-primary btn-full">View Notes</button>
+      </div>
+
+      <!-- Technical 2 -->
+      <div class="card resource-card animate-fade" data-category="technical">
+        <span class="prep-tag tag-technical">Technical</span>
+        <h3>System Design Primer</h3>
+        <p>Design URL shorteners, Twitter, Netflix, and Uber from scratch with scalability focus.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="server"></i> 12 Case Studies</span>
+          <span><i data-lucide="git-branch"></i> Architecture Diagrams</span>
+        </div>
+        <button class="btn btn-primary btn-full">View Notes</button>
+      </div>
+
+      <!-- Technical 3 -->
+      <div class="card resource-card animate-fade" data-category="technical">
+        <span class="prep-tag tag-technical">Technical</span>
+        <h3>Computer Networks</h3>
+        <p>TCP/IP, DNS, HTTP/HTTPS, load balancing, and CDN — essentials for backend interviews.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="network"></i> 9 Topics</span>
+          <span><i data-lucide="layers"></i> Protocol Deep Dives</span>
+        </div>
+        <button class="btn btn-primary btn-full">View Notes</button>
+      </div>
+
+      <!-- CS Fundamentals 1 -->
+      <div class="card resource-card animate-fade" data-category="cs fundamentals">
+        <span class="prep-tag tag-cs">CS Fundamentals</span>
+        <h3>Operating Systems Essentials</h3>
+        <p>Processes, Threads, Semaphores, Deadlocks, and Memory Management for tech rounds.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="cpu"></i> 15 Chapters</span>
+          <span><i data-lucide="layers"></i> 8 Topics</span>
+        </div>
+        <button class="btn btn-primary btn-full">Explore</button>
+      </div>
+
+      <!-- CS Fundamentals 2 -->
+      <div class="card resource-card animate-fade" data-category="cs fundamentals">
+        <span class="prep-tag tag-cs">CS Fundamentals</span>
+        <h3>OOP &amp; Design Patterns</h3>
+        <p>Inheritance, polymorphism, SOLID principles, and the top 23 GoF design patterns.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="box"></i> 23 Patterns</span>
+          <span><i data-lucide="code-2"></i> Code Examples</span>
+        </div>
+        <button class="btn btn-primary btn-full">Explore</button>
+      </div>
+
+      <!-- HR 1 -->
+      <div class="card resource-card animate-fade" data-category="hr">
+        <span class="prep-tag tag-hr">HR</span>
+        <h3>HR Behavioural Toolkit</h3>
+        <p>Master the STAR method and handle tricky questions about salary and career gaps.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="message-square"></i> 50 Questions</span>
+          <span><i data-lucide="check-circle"></i> Mock Scripts</span>
+        </div>
+        <button class="btn btn-primary btn-full">Practice Now</button>
+      </div>
+
+      <!-- HR 2 -->
+      <div class="card resource-card animate-fade" data-category="hr">
+        <span class="prep-tag tag-hr">HR</span>
+        <h3>Salary Negotiation Guide</h3>
+        <p>Scripts, counter-offer strategies, and how to evaluate total compensation packages.</p>
+        <div class="resource-meta">
+          <span><i data-lucide="trending-up"></i> 5 Scripts</span>
+          <span><i data-lucide="dollar-sign"></i> Comp Breakdown</span>
+        </div>
+        <button class="btn btn-primary btn-full">Practice Now</button>
+      </div>
+
+    </div>
+
+    <div class="prep-no-results">
+      <i data-lucide="search-x"></i>
+      <p>No resources found for this category.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 EliteJob Portal — Built for the next generation of engineers.</p>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/filter.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>

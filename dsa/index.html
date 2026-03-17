@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteJob — DSA Master Sheet</title>
+  <meta name="description" content="182 curated DSA problems across 15 topics with progress tracking.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/dsa.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <a href="../index.html" class="logo">
+      <i data-lucide="briefcase"></i>
+      EliteJob
+    </a>
+
+    <div class="nav-links">
+      <a href="../index.html">Jobs</a>
+      <a href="../preparation/index.html">Preparation</a>
+      <a href="../companies/index.html">Companies</a>
+      <a href="index.html" class="active">DSA Prep</a>
+    </div>
+
+    <div class="user-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="sun"></i>
+      </button>
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+    <!-- ── Header & Progress ──────────────────────────────── -->
+    <div class="animate-fade">
+      <div class="dsa-page-header">
+        <div>
+          <h1>Ultimate DSA Prep Sheet</h1>
+          <p>Master 182 curated problems across 15 major topics.</p>
+        </div>
+        <div class="dsa-progress-display">
+          <h2 id="progressPercent">0%</h2>
+          <p id="progressCount">0 / 182 solved</p>
+        </div>
+      </div>
+
+      <div class="progress-bar-container">
+        <div id="progressBar" class="progress-bar-fill"></div>
+      </div>
+    </div>
+
+    <!-- ── Controls ───────────────────────────────────────── -->
+    <div class="dsa-controls">
+      <button id="expandAllBtn" class="btn btn-outline">
+        <i data-lucide="chevrons-down"></i> Expand All
+      </button>
+      <button id="collapseAllBtn" class="btn btn-outline">
+        <i data-lucide="chevrons-up"></i> Collapse All
+      </button>
+      <button id="resetProgressBtn" class="btn btn-outline">
+        <i data-lucide="rotate-ccw"></i> Reset Progress
+      </button>
+    </div>
+
+    <!-- ── DSA Sheet (rendered by dsa.js) ─────────────────── -->
+    <div id="dsaSheet">
+      <!-- Topics injected here -->
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 EliteJob Portal — Built for the next generation of engineers.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data/dsa-problems.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/dsa.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>

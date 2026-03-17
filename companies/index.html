@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteJob — Company Hiring Processes</title>
+  <meta name="description" content="In-depth breakdown of hiring workflows at top tech firms — Google, Amazon, Microsoft, Meta, Apple, Netflix.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages/companies.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <a href="../index.html" class="logo">
+      <i data-lucide="briefcase"></i>
+      EliteJob
+    </a>
+
+    <div class="nav-links">
+      <a href="../index.html">Jobs</a>
+      <a href="../preparation/index.html">Preparation</a>
+      <a href="index.html" class="active">Companies</a>
+      <a href="../dsa/index.html">DSA Prep</a>
+    </div>
+
+    <div class="user-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="sun"></i>
+      </button>
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+    <header class="animate-fade">
+      <div class="section-header">
+        <h1>Company Resource Hub</h1>
+        <p>In-depth breakdown of hiring workflows at top tech firms. Click any company to see the full process.</p>
+      </div>
+    </header>
+
+    <!-- ── Company Cards Grid ──────────────────────────────── -->
+    <div class="grid" id="companiesGrid" style="margin-top: 2.5rem;">
+      <!-- Populated by companies.js -->
+    </div>
+
+    <!-- ── Process Detail Panel ───────────────────────────── -->
+    <div id="processPanel" class="process-panel">
+      <!-- Populated by companies.js when a company is clicked -->
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 EliteJob Portal — Built for the next generation of engineers.</p>
+    </div>
+  </footer>
+
+  <script src="../js/data/companies.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/companies.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>

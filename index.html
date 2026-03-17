@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EliteJob — Modern Job Portal &amp; Career Prep</title>
+  <meta name="description" content="Find the best tech jobs and prepare for interviews with our comprehensive DSA sheets, company hiring patterns, and aptitude resources.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+</head>
+
+<body>
+
+  <!-- ── Navigation ─────────────────────────────────────────── -->
+  <nav>
+    <a href="index.html" class="logo">
+      <i data-lucide="briefcase"></i>
+      EliteJob
+    </a>
+
+    <div class="nav-links">
+      <a href="index.html" class="active">Jobs</a>
+      <a href="preparation/index.html">Preparation</a>
+      <a href="companies/index.html">Companies</a>
+      <a href="dsa/index.html">DSA Prep</a>
+    </div>
+
+    <div class="user-actions">
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+        <i data-lucide="sun"></i>
+      </button>
+      <button class="btn btn-outline">Post a Job</button>
+      <button id="mobileMenuToggle" class="mobile-menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ── Hero ───────────────────────────────────────────────── -->
+    <section class="hero animate-fade">
+      <div class="container hero-content">
+
+        <div class="hero-left">
+          <h1>Your Gateway to<br><span class="highlight">Tech Careers</span></h1>
+          <p>Expert-curated opportunities and the ultimate prep toolkit to help you ace your next interview. Build your career with confidence.</p>
+
+          <div class="hero-cta">
+            <a href="#jobs" class="btn btn-primary">
+              <i data-lucide="search"></i> Browse Jobs
+            </a>
+            <a href="dsa/index.html" class="btn btn-outline">Start DSA Prep</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <h2>1,000+</h2>
+              <p>Active Jobs</p>
+            </div>
+            <div class="hero-stat">
+              <h2>150+</h2>
+              <p>Top Companies</p>
+            </div>
+            <div class="hero-stat">
+              <h2>50K+</h2>
+              <p>Happy Users</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-features">
+          <div class="hero-feature-card">
+            <div class="card-icon"><i data-lucide="shield-check"></i></div>
+            <h4>Verified Jobs</h4>
+            <p>All postings are authenticated</p>
+          </div>
+          <div class="hero-feature-card">
+            <div class="card-icon"><i data-lucide="bell"></i></div>
+            <h4>Instant Alerts</h4>
+            <p>Get notified immediately</p>
+          </div>
+          <div class="hero-feature-card">
+            <div class="card-icon"><i data-lucide="zap"></i></div>
+            <h4>Easy Apply</h4>
+            <p>Simple application process</p>
+          </div>
+          <div class="hero-feature-card">
+            <div class="card-icon"><i data-lucide="award"></i></div>
+            <h4>Career Growth</h4>
+            <p>Build your future</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Job Search ──────────────────────────────────────────── -->
+    <section id="jobs" class="search-section">
+      <div class="container">
+        <div class="search-box">
+          <div class="search-box-header">
+            <h2>Job <span>Search</span></h2>
+            <p>Search from thousands of verified tech job opportunities</p>
+          </div>
+
+          <div class="search-inputs">
+            <input id="searchKeyword"  type="text"   class="search-input" placeholder="Job title, keywords, skills…">
+            <input id="searchLocation" type="text"   class="search-input" placeholder="City, region, or Remote">
+            <select id="searchType"                  class="search-input">
+              <option value="">All Job Types</option>
+              <option value="full-time">Full-time</option>
+              <option value="remote">Remote</option>
+              <option value="internship">Internship</option>
+            </select>
+          </div>
+
+          <div class="search-btn-row">
+            <button id="searchBtn" class="btn btn-primary">
+              <i data-lucide="search"></i> Search Jobs
+            </button>
+          </div>
+
+          <div class="popular-tags">
+            <span class="label">Popular:</span>
+            <span class="popular-tag">Software Engineer</span>
+            <span class="popular-tag">Data Scientist</span>
+            <span class="popular-tag">Product Manager</span>
+            <span class="popular-tag">DevOps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Latest Opportunities ───────────────────────────────── -->
+    <section class="container">
+      <div class="opportunities-header">
+        <div class="section-header">
+          <h2>Latest <span>Opportunities</span></h2>
+          <p>Fresh opportunities updated daily</p>
+        </div>
+        <a href="#jobs" class="btn btn-outline">View All &rarr;</a>
+      </div>
+      <div class="grid" id="jobGrid">
+        <!-- Populated by filter.js + JOBS data -->
+      </div>
+    </section>
+
+    <!-- ── Interview Prep Hub Preview ─────────────────────────── -->
+    <section class="container prep-hub-section">
+      <div class="section-header">
+        <h2>Interview Preparation <span style="color:var(--primary);font-weight:300;">Hub</span></h2>
+        <p>Everything you need to crack your next technical or non-technical interview.</p>
+      </div>
+
+      <div class="category-nav">
+        <button class="category-btn active">All Resources</button>
+        <button class="category-btn">Aptitude</button>
+        <button class="category-btn">Technical</button>
+        <button class="category-btn">CS Fundamentals</button>
+        <button class="category-btn">HR</button>
+      </div>
+
+      <div class="grid">
+        <div class="card resource-card animate-fade" data-category="aptitude">
+          <span class="prep-tag tag-aptitude">Aptitude</span>
+          <h3>Quantitative Masterclass</h3>
+          <p>Comprehensive guide to Numbers, Profit &amp; Loss, Time &amp; Work, and probability problems.</p>
+          <div class="resource-meta">
+            <span><i data-lucide="file-text"></i> 12 Topics</span>
+            <span><i data-lucide="play-circle"></i> 4 Practice Sets</span>
+          </div>
+          <button class="btn btn-primary btn-full">Start Learning</button>
+        </div>
+
+        <div class="card resource-card animate-fade" data-category="technical">
+          <span class="prep-tag tag-technical">Technical</span>
+          <h3>DBMS &amp; SQL Notes</h3>
+          <p>From normalisation to indexing and complex joins. Interview-focused SQL query collection.</p>
+          <div class="resource-meta">
+            <span><i data-lucide="database"></i> 45 Notes</span>
+            <span><i data-lucide="terminal"></i> 20+ Lab Tasks</span>
+          </div>
+          <button class="btn btn-primary btn-full">View Notes</button>
+        </div>
+
+        <div class="card resource-card animate-fade" data-category="hr">
+          <span class="prep-tag tag-hr">HR</span>
+          <h3>HR Behavioural Toolkit</h3>
+          <p>Master the STAR method and handle tricky questions about salary and career gaps.</p>
+          <div class="resource-meta">
+            <span><i data-lucide="message-square"></i> 50 Questions</span>
+            <span><i data-lucide="check-circle"></i> Mock Scripts</span>
+          </div>
+          <button class="btn btn-primary btn-full">Practice Now</button>
+        </div>
+
+        <div class="card resource-card animate-fade" data-category="cs fundamentals">
+          <span class="prep-tag tag-cs">CS Fundamentals</span>
+          <h3>Operating Systems Essentials</h3>
+          <p>Processes, Threads, Semaphores, and Memory Management for tech rounds.</p>
+          <div class="resource-meta">
+            <span><i data-lucide="cpu"></i> 15 Chapters</span>
+            <span><i data-lucide="layers"></i> 8 Topics</span>
+          </div>
+          <button class="btn btn-primary btn-full">Explore</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 EliteJob Portal — Built for the next generation of engineers.</p>
+    </div>
+  </footer>
+
+  <script src="js/data/jobs.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/filter.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+
+</html>
